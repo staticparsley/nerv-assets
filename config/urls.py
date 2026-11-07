@@ -25,5 +25,6 @@ urlpatterns = [
     path("api/assets/", include("inventory.urls")),
     path("healthz/", healthz, name="healthz"),
     path("readyz/", readyz, name="readyz"),
+    path("", include("django_prometheus.urls")),
 ]
 
