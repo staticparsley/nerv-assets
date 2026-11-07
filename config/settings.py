@@ -36,6 +36,10 @@ ALLOWED_HOSTS = [
     if host.strip()
 ]
 
+pod_ip = os.environ.get("POD_IP")
+
+if pod_ip:
+    ALLOWED_HOSTS.append(pod_ip)
 
 # Application definition
 
